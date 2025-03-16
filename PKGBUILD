@@ -1,3 +1,5 @@
+#Maintainer: Reid Nelsen (dillweed) <drn102@gmail.com>
+
 pkgname='xen-guest-agent'
 pkgver=0.4.0.55.g5c274e6
 pkgrel=1
