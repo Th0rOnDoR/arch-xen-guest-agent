@@ -1,6 +1,6 @@
 #Maintainer: Reid Nelsen (dillweed) <drn102@gmail.com>
 
-pkgname='xen-guest-agent'
+pkgname='xen-guest-agent-git'
 pkgver=0.4.0.55.g5c274e6
 pkgrel=1
 pkgdesc='Xen guest agent tools written in Rust'
@@ -32,7 +32,7 @@ build() {
   cargo build --release
 }
 
-package_xen-guest-agent() {
+package_xen-guest-agent-git() {
   install -Dm755 "$srcdir/xen-guest-agent/target/release/xen-guest-agent" "$pkgdir/usr/bin/xen-guest-agent"
   install -Dm644 "xen-guest-agent.service" "$pkgdir/usr/lib/systemd/system/xen-guest-agent.service"
 }
