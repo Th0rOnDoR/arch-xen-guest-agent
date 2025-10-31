@@ -1,0 +1,17 @@
+install_msg() {
+    echo \
+    "
+    Don't forget to enable the service:
+
+        systemctl enable xen-guest-agent.service
+    "
+}
+
+post_install() {
+    install_msg
+}
+
+pre_remove() {
+    systemctl stop xen-guest-agent.service
+    systemctl disable xen-guest-agent.service
+}
